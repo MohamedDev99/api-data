@@ -20,10 +20,18 @@ export default function Preview() {
                     <img src={image} className="w-full max-h-56 rounded-t object-contain" alt="" />
                     <h3 className="text-center">{title}</h3>
                     <div className="flex items-center justify-around px-4">
-                        <span>{price}$</span>
-                        <span>{"⭐ " + rate}</span>
+                        <span>
+                            <span className="text-blue-500">Price: </span>
+                            {" " + price}$
+                        </span>
+                        <span>
+                            <span className="text-blue-500">Rating: </span>
+                            {" ⭐ " + rate}
+                        </span>
                     </div>
-                    <p className="text-orange-400 tracking-widest text-center p-4">{desc}</p>
+                    <p className="text-orange-400 tracking-widest text-center p-4">
+                        {desc && desc.slice(0, 250) + " ..."}
+                    </p>
                 </div>
             </div>
         </section>

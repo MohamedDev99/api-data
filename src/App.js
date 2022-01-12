@@ -34,12 +34,18 @@ export default function App() {
         <main className="relative bg-[#0F172A] h-screen text- flex flex-col items-center justify-center w-full overflow-y-scroll text-white">
             <section className="max-w-5xl h-screen">
                 <h1 className="my-8 text-center font-montserrat text-3xl tracking-widest">
-                    All Products
+                    Products Table
                 </h1>
-                <h2 className="w-full text-center text-orange-300 text-xl my-8 font-mali">
-                    created by react library and styled by tailwindcss
-                </h2>
                 <Table products={data} />
+                <h2 className="w-full text-center text-orange-300 text-lg my-8 font-mali">
+                    ** Libraries used in this app **
+                </h2>
+                <h4 className=" flex flex-col space-y-3 text-gray-400 text-xs text-center">
+                    <span>1 - react library</span>
+                    <span>2 - tailwindcss for styling</span>
+                    <span> 3 - react-query for handling the api</span>
+                    <span>4 - react-table for handling the table</span>
+                </h4>
             </section>
             {isShowing && <Preview />}
         </main>
