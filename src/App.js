@@ -1,13 +1,11 @@
 import axios from "axios";
-import { useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 import { useRecoilValue } from "recoil";
 import { previewDetailsState, showState } from "./Atom/PreviewAtom";
 import Preview from "./components/Preview";
 import Table from "./components/Table";
 
 export default function App() {
-    const queryClient = useQueryClient();
-
     const previewDetails = useRecoilValue(previewDetailsState);
     const isShowing = useRecoilValue(showState);
 

@@ -9,6 +9,8 @@ export default function Preview() {
     // * get and set state of preview component
     const [isShow, setIsShow] = useRecoilState(showState);
 
+    console.log(isShow);
+
     return (
         <section
             onClick={() => setIsShow(false)}
